@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOTZA — Enterprise AI Knowledge Platform</title>
+    <meta name="description"
+        content="Botza transforms raw organizational knowledge into intelligent, governed AI bots." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <meta name="keywords" content="enterprise AI, knowledge platform, chatbot, AI deployment, Indika AI, Botza" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" id="nav-logo-link" aria-label="Botza Home">
+                <svg viewBox="0 0 160 40" height="40" class="brand-logo-v1" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(0, 6)">
+                        <rect x="0" y="0" width="7" height="28" fill="#C8F000" />
+                        <rect x="7" y="0" width="14" height="12" fill="none" stroke="#C8F000" stroke-width="2" />
+                        <line x1="11" y1="4" x2="17" y2="4" stroke="rgba(196, 240, 0, 0.5)" stroke-width="1" />
+                        <line x1="11" y1="6" x2="17" y2="6" stroke="rgba(196, 240, 0, 0.5)" stroke-width="1" />
+                        <line x1="11" y1="8" x2="15" y2="8" stroke="rgba(196, 240, 0, 0.5)" stroke-width="1" />
+                        <rect x="7" y="14" width="18" height="14" fill="none" stroke="#C8F000" stroke-width="2" />
+                        <polyline points="13,18 17,21 13,24" fill="none" stroke="#C8F000" stroke-width="1.5" />
+                    </g>
+                    <g font-family="'Barlow Condensed', sans-serif" font-weight="800" font-size="28" fill="#FFFFFF"
+                        letter-spacing="0.08em">
+                        <text x="36" y="24">B</text>
+                        <text x="50" y="24">O</text>
+                        <text x="68" y="24">TZA</text>
+                    </g>
+                    <circle cx="56.5" cy="14" r="8" fill="none" stroke="#C8F000" stroke-width="1.5" />
+                    <text x="36" y="35" font-family="'Inter', sans-serif" font-weight="400" font-size="8" fill="#8A8FA8"
+                        letter-spacing="0.15em">BY INDIKA AI</text>
+                </svg>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="product.html" class="nav-link">PRODUCT</a></li>
+                <li><a href="#usecases" class="nav-link">USE CASES</a></li>
+                <li><a href="#how-it-works" class="nav-link">HOW IT WORKS</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-login">LOGIN</a>
+                <a href="#cta" class="btn-primary" id="nav-demo-btn"><span>REQUEST DEMO</span></a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-content fade-up">
+                <p class="label section-label hero-pre-label">
+                    <span class="pre-icon">◆</span>
+                    ENTERPRISE AI PLATFORM
+                </p>
+                <h1 class="headline section-headline hero-headline">
+                    TURN<br />KNOWLEDGE INTO<br /><span class="lime">TRUSTED AI</span>
+                </h1>
+                <div class="hero-line-row">
+                    <span class="hero-lime-line"></span>
+                    <span class="hero-line-arrow">→</span>
+                </div>
+                <p class="hero-sub">
+                    Botza enables enterprises to deploy domain-specific bots, assessments,
+                    and knowledge systems — with governance, compliance, and speed.
+                </p>
+                <div class="hero-cta-row">
+                    <a href="product.html" class="btn-primary" id="hero-get-started"><span>GET STARTED →</span></a>
+                    <a href="#how-it-works" class="hero-text-link">SEE HOW IT WORKS</a>
+                </div>
+            </div>
+            <!-- ── Knowledge Engine Animation ── -->
+            <div class="ke-panel" id="knowledge-engine" role="img"
+                aria-label="Knowledge Engine: documents flow in, Botza processes them, intelligent responses flow out">
+                <!-- Static dashed connector SVG -->
+                <svg class="ke-lines" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <!-- Doc → Node -->
+                    <line x1="72" y1="102" x2="194" y2="220" stroke="#C8F000" stroke-width="1.2" stroke-dasharray="5 4"
+                        stroke-opacity="0.35" />
+                    <line x1="240" y1="108" x2="240" y2="220" stroke="#C8F000" stroke-width="1.2" stroke-dasharray="5 4"
+                        stroke-opacity="0.35" />
+                    <line x1="408" y1="102" x2="286" y2="220" stroke="#C8F000" stroke-width="1.2" stroke-dasharray="5 4"
+                        stroke-opacity="0.35" />
+                    <!-- Node → Output -->
+                    <line x1="194" y1="264" x2="86" y2="362" stroke="#C8F000" stroke-width="1.2" stroke-dasharray="5 4"
+                        stroke-opacity="0.35" />
+                    <line x1="240" y1="264" x2="240" y2="362" stroke="#C8F000" stroke-width="1.2" stroke-dasharray="5 4"
+                        stroke-opacity="0.35" />
+                    <line x1="286" y1="264" x2="394" y2="362" stroke="#C8F000" stroke-width="1.2" stroke-dasharray="5 4"
+                        stroke-opacity="0.35" />
+                </svg>
+
+                <!-- Source document cards -->
+                <div class="ke-doc ke-doc-1"><span class="ke-d-icon">📄</span><span
+                        class="ke-d-label">POLICY_DOC.PDF</span></div>
+                <div class="ke-doc ke-doc-2"><span class="ke-d-icon">🎫</span><span
+                        class="ke-d-label">SUPPORT_TICKETS.CSV</span></div>
+                <div class="ke-doc ke-doc-3"><span class="ke-d-icon">📋</span><span
+                        class="ke-d-label">ONBOARDING_SOP.DOCX</span></div>
+
+                <!-- Processing node -->
+                <div class="ke-node-wrap">
+                    <div class="ke-node">
+                        <span class="ke-node-name">BOTZA</span>
+                        <span class="ke-node-sub">INTELLIGENCE ENGINE</span>
+                    </div>
+                </div>
+
+                <!-- Output response cards -->
+                <div class="ke-out ke-out-1">
+                    <p class="ke-out-q">"What is the leave policy?"</p>
+                    <p class="ke-out-r">✓ ANSWERED INSTANTLY</p>
+                </div>
+                <div class="ke-out ke-out-2">
+                    <p class="ke-out-type">QUIZ GENERATED</p>
+                    <p class="ke-out-meta">5 QUESTIONS READY</p>
+                </div>
+                <div class="ke-out ke-out-3">
+                    <p class="ke-out-type">TICKET DEFLECTED</p>
+                    <p class="ke-out-meta">0 AGENTS NEEDED</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Process Bar -->
+        <div class="hero-process-bar">
+            <div class="process-bar-inner">
+                <div class="process-step" id="process-step-1">
+                    <span class="process-num">01</span>
+                    <span class="process-label">KNOWLEDGE INGESTION</span>
+                </div>
+                <div class="process-divider"></div>
+                <div class="process-step" id="process-step-2">
+                    <span class="process-num">02</span>
+                    <span class="process-label">BOT CONFIGURATION</span>
+                </div>
+                <div class="process-divider"></div>
+                <div class="process-step active" id="process-step-3">
+                    <span class="process-num">03</span>
+                    <span class="process-label">INTELLIGENCE ENGINE</span>
+                    <span class="process-active-icon">↻</span>
+                </div>
+                <div class="process-divider"></div>
+                <div class="process-step" id="process-step-4">
+                    <span class="process-num">04</span>
+                    <span class="process-label">DEPLOY & GOVERN</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       STATS SECTION
+  ============================================================ -->
+    <section class="stats-section" id="stats">
+        <div class="stats-grid">
+            <div class="botza-card stat-card fade-up" id="stat-1">
+                <div class="stat-num">88<span class="stat-unit">%</span></div>
+                <div class="body stat-desc">Multi-Channel Deployment Rate</div>
+                <div class="stat-bar"></div>
+            </div>
+            <div class="botza-card botza-card--lime stat-card stat-card--lime fade-up" id="stat-2">
+                <div class="stat-watermark">BOTZA</div>
+                <div class="stat-num">120<span class="stat-unit">+</span></div>
+                <div class="stat-desc" style="font-family: var(--font-body); font-size: 15px; font-weight: 400;">Active
+                    Enterprise Deployments</div>
+            </div>
+            <div class="botza-card stat-card fade-up" id="stat-3">
+                <div class="stat-num">68<span class="stat-unit">%</span></div>
+                <div class="body stat-desc">Multi-Department Adoption Rate</div>
+                <div class="stat-bar"></div>
+            </div>
+            <div class="botza-card stat-card fade-up" id="stat-4">
+                <div class="stat-num">5<span class="stat-unit">+</span></div>
+                <div class="body stat-desc">Enterprise Functions Covered</div>
+                <div class="stat-bar"></div>
+            </div>
+        </div>
+        <div class="stats-transition fade-up">
+            <span class="transition-line"></span>
+            <h2 class="transition-headline">HOW <span class="lime">BOTZA</span> CAN TRANSFORM YOUR ENTERPRISE</h2>
+            <span class="transition-line"></span>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       BENEFITS SECTION
+  ============================================================ -->
+    <section class="benefits-section" id="benefits">
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <p class="label section-label"><span class="lime">◆</span> ADVANTAGE</p>
+                <h2 class="headline section-headline">HOW <span class="lime">BOTZA</span> AI CAN BENEFIT YOUR ENTERPRISE
+                </h2>
+            </div>
+            <div class="benefits-grid fade-up">
+                <div class="botza-card benefit-card" id="benefit-1">
+                    <div class="badge-row">
+                        <span class="yellow-badge">01</span>
+                    </div>
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="8" width="14" height="14" stroke="white" stroke-width="2" />
+                            <rect x="26" y="8" width="14" height="14" stroke="white" stroke-width="2" />
+                            <rect x="8" y="26" width="14" height="14" stroke="white" stroke-width="2" />
+                            <rect x="26" y="26" width="14" height="14" stroke="white" stroke-width="2" />
+                            <line x1="22" y1="15" x2="26" y2="15" stroke="white" stroke-width="2" />
+                            <line x1="22" y1="33" x2="26" y2="33" stroke="white" stroke-width="2" />
+                            <line x1="15" y1="22" x2="15" y2="26" stroke="white" stroke-width="2" />
+                            <line x1="33" y1="22" x2="33" y2="26" stroke="white" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title benefit-label">CENTRALIZE KNOWLEDGE</h3>
+                    <p class="body benefit-desc">Unify documents, SOPs, FAQs, and institutional knowledge into a single
+                        AI-powered hub.</p>
+                </div>
+                <div class="botza-card benefit-card" id="benefit-2">
+                    <div class="badge-row">
+                        <span class="yellow-badge">02</span>
+                    </div>
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="16" stroke="white" stroke-width="2" />
+                            <path d="M18 24 L22 28 L30 20" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="24" cy="10" r="2" fill="white" />
+                            <circle cx="38" cy="24" r="2" fill="white" />
+                            <circle cx="24" cy="38" r="2" fill="white" />
+                            <circle cx="10" cy="24" r="2" fill="white" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title benefit-label">AUTOMATE SUPPORT</h3>
+                    <p class="body benefit-desc">Deflect repetitive tickets and resolve queries instantly with
+                        intelligent
+                        bots across all channels.</p>
+                </div>
+                <div class="botza-card benefit-card" id="benefit-3">
+                    <div class="badge-row">
+                        <span class="yellow-badge">03</span>
+                    </div>
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="24" cy="24" rx="20" ry="11" stroke="white" stroke-width="2" />
+                            <circle cx="24" cy="24" r="5" stroke="white" stroke-width="2" />
+                            <line x1="4" y1="24" x2="10" y2="24" stroke="white" stroke-width="2" />
+                            <line x1="38" y1="24" x2="44" y2="24" stroke="white" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title benefit-label">IMPROVE VISIBILITY</h3>
+                    <p class="body benefit-desc">Real-time dashboards and audit logs give you complete oversight of
+                        every AI
+                        interaction.</p>
+                </div>
+                <div class="botza-card benefit-card" id="benefit-4">
+                    <div class="badge-row">
+                        <span class="yellow-badge">04</span>
+                    </div>
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="20" r="8" stroke="white" stroke-width="2" />
+                            <path d="M12 40 C12 32 36 32 36 40" stroke="white" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M28 18 L32 14 L36 18" stroke="#C8F000" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <line x1="32" y1="14" x2="32" y2="24" stroke="#C8F000" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title benefit-label">REDUCE COSTS</h3>
+                    <p class="body benefit-desc">Cut operational overhead by automating knowledge delivery, triage, and
+                        routine workflows at scale.</p>
+                </div>
+            </div>
+            <div class="section-rule fade-up"></div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       PLATFORM CAPABILITIES
+  ============================================================ -->
+    <section class="platform-section" id="platform">
+        <div class="section-inner">
+            <div class="platform-header fade-up">
+                <p class="label section-label"><span class="lime">◆</span> PLATFORM</p>
+                <h2 class="headline section-headline">CAPABILITIES</h2>
+            </div>
+
+            <div class="platform-diagram fade-up">
+                <!-- Top capability chips -->
+                <div class="cap-chips-top">
+                    <div class="botza-card cap-chip" id="cap-ingest">
+                        <span class="cap-icon">
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" class="botza-icon">
+                                <rect x="3" y="3" width="14" height="14" rx="2" stroke="white" stroke-width="1.5" />
+                                <line x1="7" y1="7" x2="13" y2="7" stroke="white" stroke-width="1.5" />
+                                <line x1="7" y1="11" x2="13" y2="11" stroke="white" stroke-width="1.5" />
+                            </svg>
+                        </span> INGEST
+                    </div>
+                    <div class="botza-card cap-chip" id="cap-build">
+                        <span class="cap-icon">
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" class="botza-icon">
+                                <circle cx="10" cy="10" r="7" stroke="white" stroke-width="1.5" />
+                                <circle cx="7" cy="9" r="1.5" fill="white" />
+                                <circle cx="13" cy="9" r="1.5" fill="white" />
+                                <path d="M7 14 C8 15 12 15 13 14" stroke="white" stroke-width="1.5" />
+                            </svg>
+                        </span> BUILD BOTS
+                    </div>
+                </div>
+
+                <!-- Main node row -->
+                <div class="platform-nodes-row">
+                    <!-- Left node -->
+                    <div class="botza-card platform-node" id="node-team">
+                        <div class="node-icon-box">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="4" stroke="white" stroke-width="1.5" />
+                                <circle cx="19" cy="10" r="4" stroke="white" stroke-width="1.5" />
+                                <path d="M4 22 C4 16 16 16 16 22" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                                <path d="M16 22 C16 16 25 16 25 22" stroke="#8A8FA8" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-dasharray="2 2" />
+                            </svg>
+                        </div>
+                        <span class="card-title node-label">ANY TEAM</span>
+                    </div>
+
+                    <!-- Dashed line left -->
+                    <div class="platform-dashed-line">
+                        <svg width="120" height="2" viewBox="0 0 120 2">
+                            <line x1="0" y1="1" x2="120" y2="1" stroke="#C8F000" stroke-width="1.5"
+                                stroke-dasharray="6 4" />
+                        </svg>
+                    </div>
+
+                    <!-- Center node (lime) -->
+                    <div class="platform-center-node" id="node-engine">
+                        <div class="center-node-icon">⇄</div>
+                        <span class="center-node-label">INTELLIGENCE ENGINE</span>
+                    </div>
+
+                    <!-- Dashed line right -->
+                    <div class="platform-dashed-line">
+                        <svg width="120" height="2" viewBox="0 0 120 2">
+                            <line x1="0" y1="1" x2="120" y2="1" stroke="#C8F000" stroke-width="1.5"
+                                stroke-dasharray="6 4" />
+                        </svg>
+                    </div>
+
+                    <!-- Right node -->
+                    <div class="botza-card platform-node" id="node-channel">
+                        <div class="node-icon-box">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="4" y="4" width="20" height="20" rx="2" stroke="white" stroke-width="1.5" />
+                                <rect x="7" y="9" width="14" height="2" fill="white" fill-opacity="0.6" />
+                                <rect x="7" y="13" width="14" height="2" fill="white" fill-opacity="0.4" />
+                                <rect x="7" y="17" width="8" height="2" fill="white" fill-opacity="0.3" />
+                            </svg>
+                        </div>
+                        <span class="card-title node-label">ANY CHANNEL</span>
+                    </div>
+                </div>
+
+                <!-- Bottom capability chips -->
+                <div class="cap-chips-bottom">
+                    <div class="botza-card cap-chip" id="cap-assess">
+                        <span class="cap-icon">
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10 l4 4 l8 -8" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </span> ASSESS
+                    </div>
+                    <div class="botza-card cap-chip" id="cap-govern">
+                        <span class="cap-icon">
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                <rect x="4" y="8" width="12" height="10" rx="2" stroke="white" stroke-width="1.5" />
+                                <path d="M6 8 V6 a4 4 0 0 1 8 0 V8" stroke="white" stroke-width="1.5" />
+                                <circle cx="10" cy="13" r="1.5" fill="white" />
+                            </svg>
+                        </span> GOVERN
+                    </div>
+                </div>
+
+                <!-- Integration bar -->
+                <div class="integration-bar fade-up">
+                    <p class="integration-label">INTEGRATES WITH</p>
+                    <div class="integration-icons">
+                        <div class="integration-tile" id="int-slack">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                <rect x="2" y="2" width="7" height="7" rx="2" fill="#8A8FA8" />
+                                <rect x="13" y="2" width="7" height="7" rx="2" fill="#8A8FA8" />
+                                <rect x="2" y="13" width="7" height="7" rx="2" fill="#8A8FA8" />
+                                <rect x="13" y="13" width="7" height="7" rx="2" fill="#8A8FA8" />
+                            </svg>
+                            <span>SLACK</span>
+                        </div>
+                        <div class="integration-tile" id="int-teams">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                <rect x="3" y="7" width="12" height="12" rx="1" stroke="#8A8FA8" stroke-width="1.5" />
+                                <rect x="10" y="3" width="9" height="9" rx="1" fill="#242838" stroke="#8A8FA8"
+                                    stroke-width="1.5" />
+                            </svg>
+                            <span>TEAMS</span>
+                        </div>
+                        <div class="integration-tile" id="int-crm">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                <circle cx="11" cy="11" r="8" stroke="#8A8FA8" stroke-width="1.5" />
+                                <path d="M7 11 L10 14 L15 8" stroke="#8A8FA8" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <span>CRM</span>
+                        </div>
+                        <div class="integration-tile" id="int-web">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                <circle cx="11" cy="11" r="8" stroke="#8A8FA8" stroke-width="1.5" />
+                                <ellipse cx="11" cy="11" rx="4" ry="8" stroke="#8A8FA8" stroke-width="1.5" />
+                                <line x1="3" y1="11" x2="19" y2="11" stroke="#8A8FA8" stroke-width="1.5" />
+                            </svg>
+                            <span>WEB</span>
+                        </div>
+                        <div class="integration-tile" id="int-portal">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                <rect x="3" y="3" width="16" height="16" rx="1" stroke="#8A8FA8" stroke-width="1.5" />
+                                <rect x="3" y="3" width="16" height="5" rx="1" fill="#8A8FA8" fill-opacity="0.3" />
+                                <line x1="7" y1="12" x2="15" y2="12" stroke="#8A8FA8" stroke-width="1.5" />
+                                <line x1="7" y1="15" x2="12" y2="15" stroke="#8A8FA8" stroke-width="1.5" />
+                            </svg>
+                            <span>PORTAL</span>
+                        </div>
+                        <div class="integration-tile" id="int-api">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                <rect x="3" y="7" width="16" height="8" rx="1" stroke="#8A8FA8" stroke-width="1.5" />
+                                <path d="M7 11 L9 9 L11 13 L13 9 L15 11" stroke="#8A8FA8" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       USE CASES
+  ============================================================ -->
+    <section class="usecases-section" id="usecases">
+        <div class="section-inner">
+            <div class="usecases-header fade-up">
+                <p class="label section-label"><span class="lime">◆</span> USE CASES</p>
+                <h2 class="headline section-headline">DEPLOYED ACROSS EVERY FUNCTION</h2>
+            </div>
+
+            <div class="usecases-layout fade-up">
+                <!-- Sidebar tabs -->
+                <div class="usecases-tabs" id="usecases-tabs">
+                    <button class="uc-tab active" data-uc="support" id="tab-support">CUSTOMER SUPPORT</button>
+                    <button class="uc-tab" data-uc="hr" id="tab-hr">HR &amp; LEARNING</button>
+                    <button class="uc-tab" data-uc="sales" id="tab-sales">SALES &amp; MARKETING</button>
+                    <button class="uc-tab" data-uc="it" id="tab-it">IT &amp; OPERATIONS</button>
+                    <button class="uc-tab" data-uc="finance" id="tab-finance">FINANCE &amp; COMPLIANCE</button>
+                </div>
+
+                <!-- Content panel -->
+                <div class="usecases-panel" id="usecases-panel">
+                    <div class="botza-card uc-content active" id="uc-support">
+                        <p class="label uc-meta"><span class="lime">CUSTOMER SUPPORT</span> · 32% OF DEPLOYMENTS</p>
+                        <h3 class="headline uc-headline" style="font-size: clamp(28px, 3.5vw, 46px);">Instant FAQs &amp;
+                            Troubleshooting</h3>
+                        <p class="body uc-body">Deflect repetitive tickets, resolve queries instantly via website chat,
+                            internal portals, and CRM-integrated bots. Reduce first-response time to under 30 seconds.
+                        </p>
+                        <a href="#cta" class="uc-link">EXPLORE USE CASE →</a>
+                        <div class="botza-card uc-accent-card" style="padding: 20px;">
+                            <div class="card-title uc-accent-stat">32%</div>
+                            <div class="body uc-accent-label">of enterprise deployments tackle customer support first
+                            </div>
+                        </div>
+                    </div>
+                    <div class="botza-card uc-content" id="uc-hr">
+                        <p class="label uc-meta"><span class="lime">HR &amp; LEARNING</span> · 24% OF DEPLOYMENTS</p>
+                        <h3 class="headline uc-headline" style="font-size: clamp(28px, 3.5vw, 46px);">Onboarding &amp;
+                            Continuous Learning</h3>
+                        <p class="body uc-body">Automate employee onboarding, policy Q&A, and training assessments.
+                            Deliver
+                            personalized learning paths and knowledge checks at scale — without HR overhead.</p>
+                        <a href="#cta" class="uc-link">EXPLORE USE CASE →</a>
+                        <div class="botza-card uc-accent-card" style="padding: 20px;">
+                            <div class="card-title uc-accent-stat">60%</div>
+                            <div class="body uc-accent-label">reduction in HR triage time with AI-powered bots</div>
+                        </div>
+                    </div>
+                    <div class="botza-card uc-content" id="uc-sales">
+                        <p class="label uc-meta"><span class="lime">SALES &amp; MARKETING</span> · 18% OF DEPLOYMENTS
+                        </p>
+                        <h3 class="headline uc-headline" style="font-size: clamp(28px, 3.5vw, 46px);">Lead Qualification
+                            &amp; Product Knowledge</h3>
+                        <p class="body uc-body">Equip sales teams with instant, accurate product knowledge. Qualify
+                            inbound
+                            leads 24/7 and surface relevant case studies and competitive intelligence automatically.</p>
+                        <a href="#cta" class="uc-link">EXPLORE USE CASE →</a>
+                        <div class="botza-card uc-accent-card" style="padding: 20px;">
+                            <div class="card-title uc-accent-stat">3x</div>
+                            <div class="body uc-accent-label">faster response time for inbound lead qualification</div>
+                        </div>
+                    </div>
+                    <div class="botza-card uc-content" id="uc-it">
+                        <p class="label uc-meta"><span class="lime">IT &amp; OPERATIONS</span> · 15% OF DEPLOYMENTS</p>
+                        <h3 class="headline uc-headline" style="font-size: clamp(28px, 3.5vw, 46px);">IT Helpdesk &amp;
+                            Process Automation</h3>
+                        <p class="body uc-body">Handle L1 and L2 IT tickets automatically — password resets, access
+                            requests,
+                            software howtos. Integrate with your ITSM and reduce ticket volume by up to 70%.</p>
+                        <a href="#cta" class="uc-link">EXPLORE USE CASE →</a>
+                        <div class="botza-card uc-accent-card" style="padding: 20px;">
+                            <div class="card-title uc-accent-stat">70%</div>
+                            <div class="body uc-accent-label">ticket deflection rate for L1/L2 IT helpdesk</div>
+                        </div>
+                    </div>
+                    <div class="botza-card uc-content" id="uc-finance">
+                        <p class="label uc-meta"><span class="lime">FINANCE &amp; COMPLIANCE</span> · 11% OF DEPLOYMENTS
+                        </p>
+                        <h3 class="headline uc-headline" style="font-size: clamp(28px, 3.5vw, 46px);">Policy Q&amp;A
+                            &amp; Audit Readiness</h3>
+                        <p class="body uc-body">Keep finance and compliance teams aligned on ever-changing regulations.
+                            Bots
+                            provide instant, source-cited policy answers with full audit trails and governance controls.
+                        </p>
+                        <a href="#cta" class="uc-link">EXPLORE USE CASE →</a>
+                        <div class="botza-card uc-accent-card" style="padding: 20px;">
+                            <div class="card-title uc-accent-stat">100%</div>
+                            <div class="body uc-accent-label">audit traceability for every AI-generated response</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       HOW IT WORKS
+  ============================================================ -->
+    <section class="howitworks-section" id="how-it-works">
+        <div class="section-inner">
+            <div class="hiw-header fade-up">
+                <p class="label section-label"><span class="lime">◆</span> PROCESS</p>
+                <h2 class="headline section-headline">DRIVE ENTERPRISE OUTCOMES</h2>
+            </div>
+
+            <div class="hiw-grid fade-up">
+                <div class="botza-card hiw-step" id="step-1">
+                    <div class="badge-row">
+                        <span class="yellow-badge">01</span>
+                    </div>
+                    <div class="hiw-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="6" y="4" width="22" height="28" rx="1" stroke="white" stroke-width="1.5" />
+                            <line x1="10" y1="11" x2="24" y2="11" stroke="white" stroke-width="1.5" />
+                            <line x1="10" y1="16" x2="24" y2="16" stroke="white" stroke-width="1.5" />
+                            <line x1="10" y1="21" x2="18" y2="21" stroke="white" stroke-width="1.5" />
+                            <path d="M26 24 L34 32" stroke="#C8F000" stroke-width="1.5" stroke-linecap="round" />
+                            <circle cx="30" cy="28" r="6" stroke="#C8F000" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title hiw-label">UPLOAD YOUR KNOWLEDGE</h3>
+                    <p class="body hiw-desc">Documents, SOPs, FAQs, support tickets — any format, any source. Botza
+                        extracts
+                        and structures it all.</p>
+                </div>
+                <div class="hiw-connector" aria-hidden="true">
+                    <svg width="40" height="2" viewBox="0 0 40 2">
+                        <line x1="0" y1="1" x2="40" y2="1" stroke="#C8F000" stroke-width="1" stroke-dasharray="4 3" />
+                    </svg>
+                </div>
+                <div class="botza-card hiw-step" id="step-2">
+                    <div class="badge-row">
+                        <span class="yellow-badge">02</span>
+                    </div>
+                    <div class="hiw-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="6" y="12" width="28" height="20" rx="1" stroke="white" stroke-width="1.5" />
+                            <path d="M14 12 L14 8 L26 8 L26 12" stroke="white" stroke-width="1.5" />
+                            <circle cx="20" cy="22" r="4" stroke="#C8F000" stroke-width="1.5" />
+                            <line x1="20" y1="18" x2="20" y2="15" stroke="#C8F000" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title hiw-label">BUILD YOUR BOT</h3>
+                    <p class="body hiw-desc">No-code bot builder, customized per team, department, or use case. Set
+                        tone,
+                        scope, and guardrails easily.</p>
+                </div>
+                <div class="hiw-connector" aria-hidden="true">
+                    <svg width="40" height="2" viewBox="0 0 40 2">
+                        <line x1="0" y1="1" x2="40" y2="1" stroke="#C8F000" stroke-width="1" stroke-dasharray="4 3" />
+                    </svg>
+                </div>
+                <div class="botza-card hiw-step" id="step-3">
+                    <div class="badge-row">
+                        <span class="yellow-badge">03</span>
+                    </div>
+                    <div class="hiw-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="14" stroke="white" stroke-width="1.5" />
+                            <circle cx="8" cy="20" r="3" fill="#C8F000" />
+                            <circle cx="32" cy="20" r="3" fill="white" />
+                            <circle cx="20" cy="8" r="3" fill="white" />
+                            <circle cx="20" cy="32" r="3" fill="white" />
+                            <line x1="11" y1="20" x2="17" y2="20" stroke="#C8F000" stroke-width="1"
+                                stroke-dasharray="2 2" />
+                            <line x1="23" y1="20" x2="29" y2="20" stroke="white" stroke-width="1"
+                                stroke-dasharray="2 2" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title hiw-label">DEPLOY EVERYWHERE</h3>
+                    <p class="body hiw-desc">Publish to Slack, Teams, Web, CRM, or support portals in one click.
+                        Multi-channel without multi-effort.</p>
+                </div>
+                <div class="hiw-connector" aria-hidden="true">
+                    <svg width="40" height="2" viewBox="0 0 40 2">
+                        <line x1="0" y1="1" x2="40" y2="1" stroke="#C8F000" stroke-width="1" stroke-dasharray="4 3" />
+                    </svg>
+                </div>
+                <div class="botza-card hiw-step" id="step-4">
+                    <div class="badge-row">
+                        <span class="yellow-badge">04</span>
+                    </div>
+                    <div class="hiw-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="6" y="6" width="28" height="28" rx="1" stroke="white" stroke-width="1.5" />
+                            <rect x="11" y="20" width="4" height="10" fill="#C8F000" />
+                            <rect x="18" y="14" width="4" height="16" fill="white" fill-opacity="0.5" />
+                            <rect x="25" y="10" width="4" height="20" fill="white" fill-opacity="0.8" />
+                            <line x1="6" y1="6" x2="34" y2="6" stroke="#C8F000" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title hiw-label">GOVERN &amp; IMPROVE</h3>
+                    <p class="body hiw-desc">Analytics dashboard, audit logs, and compliance controls. Watch performance
+                        improve in real time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       TRACTION / SOCIAL PROOF
+  ============================================================ -->
+    <section class="traction-section" id="traction">
+        <div class="traction-rule"></div>
+        <div class="section-inner">
+            <div class="traction-header fade-up">
+                <p class="label section-label"><span class="lime">◆</span> TRACTION</p>
+                <h2 class="headline section-headline">PROVEN AT SCALE</h2>
+            </div>
+            <p class="traction-body fade-up">
+                Trusted by enterprise teams from pilot to full-scale rollout — secure, governed, and production-ready.
+            </p>
+            <div class="logo-bar fade-up">
+                <p class="logo-bar-label">TRUSTED BY ENTERPRISE TEAMS ACROSS INDUSTRIES</p>
+                <div class="logo-grid" id="logo-grid">
+
+                    <!-- Financial Services -->
+                    <div class="logo-silo" id="logo-1" data-industry="financial">
+                        <button class="silo-toggle" aria-label="Expand">+</button>
+                        <span>FINANCIAL<br />SERVICES</span>
+                        <div class="silo-expand">
+                            <div class="silo-scanner"></div>
+                            <div class="silo-content">
+                                <div class="silo-header">
+                                    <svg class="silo-icon" viewBox="0 0 18 18" fill="none" stroke="white"
+                                        stroke-width="1.5">
+                                        <path d="M9 1L2 5v3c0 5.2 3 8 7 9 4-1 7-3.8 7-9V5L9 1z" />
+                                        <path d="M6 9l2 2 4-4" stroke="#C8F000" stroke-width="1.5" />
+                                    </svg>
+                                    <span class="silo-name">FINANCIAL SERVICES</span>
+                                    <span class="silo-badge">COMPLIANCE BOTS</span>
+                                </div>
+                                <div class="silo-stats">
+                                    <div class="silo-stat"><span class="silo-stat-num">60%</span><span
+                                            class="silo-stat-label">Query Resolution</span></div>
+                                    <div class="silo-stat-divider"></div>
+                                    <div class="silo-stat"><span class="silo-stat-num">2x</span><span
+                                            class="silo-stat-label">Audit Speed</span></div>
+                                </div>
+                                <div class="silo-usecase">
+                                    <span class="silo-uc-label">TOP USE CASE</span>
+                                    <span class="silo-uc-text">Policy interpretation bots for compliance and regulatory
+                                        teams</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Healthcare Group -->
+                    <div class="logo-silo" id="logo-2" data-industry="healthcare">
+                        <button class="silo-toggle" aria-label="Expand">+</button>
+                        <span>HEALTHCARE<br />GROUP</span>
+                        <div class="silo-expand">
+                            <div class="silo-scanner"></div>
+                            <div class="silo-content">
+                                <div class="silo-header">
+                                    <svg class="silo-icon" viewBox="0 0 18 18" fill="none" stroke="white"
+                                        stroke-width="1.5">
+                                        <rect x="1" y="1" width="16" height="16" />
+                                        <rect x="7" y="4" width="4" height="10" />
+                                        <rect x="4" y="7" width="10" height="4" />
+                                    </svg>
+                                    <span class="silo-name">HEALTHCARE GROUP</span>
+                                    <span class="silo-badge">HR & ONBOARDING</span>
+                                </div>
+                                <div class="silo-stats">
+                                    <div class="silo-stat"><span class="silo-stat-num">50%</span><span
+                                            class="silo-stat-label">Onboarding Time Saved</span></div>
+                                    <div class="silo-stat-divider"></div>
+                                    <div class="silo-stat"><span class="silo-stat-num">4x</span><span
+                                            class="silo-stat-label">SOP Accessibility</span></div>
+                                </div>
+                                <div class="silo-usecase">
+                                    <span class="silo-uc-label">TOP USE CASE</span>
+                                    <span class="silo-uc-text">Role-specific onboarding assistants for clinical and
+                                        admin staff</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Global Retail -->
+                    <div class="logo-silo" id="logo-3" data-industry="retail">
+                        <button class="silo-toggle" aria-label="Expand">+</button>
+                        <span>GLOBAL<br />RETAIL</span>
+                        <div class="silo-expand">
+                            <div class="silo-scanner"></div>
+                            <div class="silo-content">
+                                <div class="silo-header">
+                                    <svg class="silo-icon" viewBox="0 0 18 18" fill="none" stroke="white"
+                                        stroke-width="1.5">
+                                        <rect x="1" y="6" width="16" height="11" />
+                                        <path d="M1 6L9 1l8 5" />
+                                        <line x1="7" y1="11" x2="11" y2="11" />
+                                        <line x1="7" y1="13" x2="11" y2="13" />
+                                    </svg>
+                                    <span class="silo-name">GLOBAL RETAIL</span>
+                                    <span class="silo-badge">CUSTOMER SUPPORT</span>
+                                </div>
+                                <div class="silo-stats">
+                                    <div class="silo-stat"><span class="silo-stat-num">70%</span><span
+                                            class="silo-stat-label">Ticket Deflection</span></div>
+                                    <div class="silo-stat-divider"></div>
+                                    <div class="silo-stat"><span class="silo-stat-num">24/7</span><span
+                                            class="silo-stat-label">Bot Availability</span></div>
+                                </div>
+                                <div class="silo-usecase">
+                                    <span class="silo-uc-label">TOP USE CASE</span>
+                                    <span class="silo-uc-text">Website chat bots resolving FAQs and order queries
+                                        instantly</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech Enterprise -->
+                    <div class="logo-silo" id="logo-4" data-industry="tech">
+                        <button class="silo-toggle" aria-label="Expand">+</button>
+                        <span>TECH<br />ENTERPRISE</span>
+                        <div class="silo-expand">
+                            <div class="silo-scanner"></div>
+                            <div class="silo-content">
+                                <div class="silo-header">
+                                    <svg class="silo-icon" viewBox="0 0 18 18" fill="none" stroke="white"
+                                        stroke-width="1.5">
+                                        <rect x="1" y="3" width="16" height="12" />
+                                        <line x1="4" y1="7" x2="6" y2="7" stroke="#C8F000" />
+                                        <line x1="7" y1="7" x2="14" y2="7" />
+                                        <line x1="4" y1="9.5" x2="6" y2="9.5" stroke="#C8F000" />
+                                        <line x1="7" y1="9.5" x2="11" y2="9.5" />
+                                        <line x1="4" y1="12" x2="6" y2="12" stroke="#C8F000" />
+                                        <line x1="7" y1="12" x2="12" y2="12" />
+                                    </svg>
+                                    <span class="silo-name">TECH ENTERPRISE</span>
+                                    <span class="silo-badge">IT & OPS</span>
+                                </div>
+                                <div class="silo-stats">
+                                    <div class="silo-stat"><span class="silo-stat-num">55%</span><span
+                                            class="silo-stat-label">Incident Resolution</span></div>
+                                    <div class="silo-stat-divider"></div>
+                                    <div class="silo-stat"><span class="silo-stat-num">3x</span><span
+                                            class="silo-stat-label">Runbook Access Speed</span></div>
+                                </div>
+                                <div class="silo-usecase">
+                                    <span class="silo-uc-label">TOP USE CASE</span>
+                                    <span class="silo-uc-text">Internal bots surfacing runbooks, release notes, and
+                                        system docs</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Logistics Corp -->
+                    <div class="logo-silo" id="logo-5" data-industry="logistics">
+                        <button class="silo-toggle" aria-label="Expand">+</button>
+                        <span>LOGISTICS<br />CORP</span>
+                        <div class="silo-expand">
+                            <div class="silo-scanner"></div>
+                            <div class="silo-content">
+                                <div class="silo-header">
+                                    <svg class="silo-icon" viewBox="0 0 18 18" fill="none" stroke="white"
+                                        stroke-width="1.5">
+                                        <rect x="1" y="3" width="10" height="10" />
+                                        <path d="M11 7h4l2 3v3h-6" />
+                                        <circle cx="5" cy="14.5" r="1.5" />
+                                        <circle cx="13" cy="14.5" r="1.5" />
+                                    </svg>
+                                    <span class="silo-name">LOGISTICS CORP</span>
+                                    <span class="silo-badge">OPERATIONS</span>
+                                </div>
+                                <div class="silo-stats">
+                                    <div class="silo-stat"><span class="silo-stat-num">45%</span><span
+                                            class="silo-stat-label">Support Load Reduced</span></div>
+                                    <div class="silo-stat-divider"></div>
+                                    <div class="silo-stat"><span class="silo-stat-num">5x</span><span
+                                            class="silo-stat-label">SOP Retrieval Speed</span></div>
+                                </div>
+                                <div class="silo-usecase">
+                                    <span class="silo-uc-label">TOP USE CASE</span>
+                                    <span class="silo-uc-text">Operations teams accessing SOPs and dispatch procedures
+                                        via chat</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Insurance Group -->
+                    <div class="logo-silo" id="logo-6" data-industry="insurance">
+                        <button class="silo-toggle" aria-label="Expand">+</button>
+                        <span>INSURANCE<br />GROUP</span>
+                        <div class="silo-expand">
+                            <div class="silo-scanner"></div>
+                            <div class="silo-content">
+                                <div class="silo-header">
+                                    <svg class="silo-icon" viewBox="0 0 18 18" fill="none" stroke="white"
+                                        stroke-width="1.5">
+                                        <rect x="3" y="1" width="12" height="16" />
+                                        <line x1="6" y1="5" x2="12" y2="5" />
+                                        <line x1="6" y1="8" x2="12" y2="8" />
+                                        <line x1="6" y1="11" x2="10" y2="11" />
+                                        <path d="M3 14l3-3" stroke="#C8F000" />
+                                    </svg>
+                                    <span class="silo-name">INSURANCE GROUP</span>
+                                    <span class="silo-badge">CLAIMS & POLICY</span>
+                                </div>
+                                <div class="silo-stats">
+                                    <div class="silo-stat"><span class="silo-stat-num">65%</span><span
+                                            class="silo-stat-label">Agent Query Deflection</span></div>
+                                    <div class="silo-stat-divider"></div>
+                                    <div class="silo-stat"><span class="silo-stat-num">3x</span><span
+                                            class="silo-stat-label">Policy Lookup Speed</span></div>
+                                </div>
+                                <div class="silo-usecase">
+                                    <span class="silo-uc-label">TOP USE CASE</span>
+                                    <span class="silo-uc-text">AI assistants helping agents retrieve policy details and
+                                        claim procedures</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="traction-rule"></div>
+    </section>
+
+    <!-- ============================================================
+       CTA DUAL PANEL
+  ============================================================ -->
+    <section class="cta-section" id="cta">
+        <div class="cta-left">
+            <div class="cta-ghost-text" aria-hidden="true">BOTZA</div>
+            <div class="cta-left-content fade-up">
+                <h2 class="cta-headline">BE THE FIRST TO KNOW</h2>
+                <p class="cta-sub">Get updates on new features, enterprise integrations, and deployment guides.</p>
+                <form class="cta-form" id="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                    <input type="email" class="cta-input" id="newsletter-email" placeholder="BUSINESS EMAIL" required />
+                    <button type="submit" class="btn-primary" id="submit-newsletter"><span>SUBMIT</span></button>
+                </form>
+                <p class="cta-form-note" id="form-status"></p>
+            </div>
+        </div>
+        <div class="cta-right">
+            <div class="cta-right-content fade-up">
+                <h2 class="cta-headline">GET IN TOUCH</h2>
+                <div class="contact-links">
+                    <a href="https://www.indikaai.com" target="_blank" rel="noopener" class="contact-link"
+                        id="contact-website">
+                        <span class="contact-circle">
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#FFFFFF"
+                                stroke-width="1.5" stroke-linecap="round">
+                                <circle cx="10" cy="10" r="8" />
+                                <path d="M2 10h16M10 2a14 14 0 0 1 0 16M10 2a14 14 0 0 0 0 16" />
+                            </svg>
+                        </span>
+                        <span>WWW.INDIKAAI.COM</span>
+                    </a>
+                    <a href="mailto:tanisha@indikaai.com" class="contact-link" id="contact-email">
+                        <span class="contact-circle">
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#FFFFFF"
+                                stroke-width="1.5" stroke-linecap="round">
+                                <rect x="2" y="4" width="16" height="12" rx="1" />
+                                <path d="M2 4l8 6 8-6" />
+                            </svg>
+                        </span>
+                        <span>TANISHA@INDIKAAI.COM</span>
+                    </a>
+                    <a href="mailto:tanisha@indikaai.com?subject=Demo%20Request" class="contact-link" id="contact-demo">
+                        <span class="contact-circle">
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#FFFFFF"
+                                stroke-width="1.5" stroke-linecap="round">
+                                <polygon points="6,3 18,10 6,17" />
+                            </svg>
+                        </span>
+                        <span>REQUEST A DEMO</span>
+                    </a>
+                    <a href="mailto:tanisha@indikaai.com?subject=Book%20a%20Call" class="contact-link"
+                        id="contact-call">
+                        <span class="contact-circle">
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#FFFFFF"
+                                stroke-width="1.5" stroke-linecap="round">
+                                <rect x="3" y="2" width="14" height="16" rx="1" />
+                                <line x1="3" y1="6" x2="17" y2="6" />
+                                <line x1="7" y1="2" x2="7" y2="6" />
+                                <line x1="13" y1="2" x2="13" y2="6" />
+                            </svg>
+                        </span>
+                        <span>BOOK A CALL</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+    <footer class="footer" id="footer">
+        <div class="footer-inner">
+            <div class="footer-brand" id="footer-brand">
+                <svg viewBox="0 0 120 70" height="70" class="brand-logo-v3" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(46, 0)">
+                        <rect x="0" y="0" width="7" height="28" fill="#C8F000" />
+                        <rect x="7" y="0" width="14" height="12" fill="none" stroke="#C8F000" stroke-width="2" />
+                        <line x1="11" y1="4" x2="17" y2="4" stroke="rgba(196, 240, 0, 0.5)" stroke-width="1" />
+                        <line x1="11" y1="6" x2="17" y2="6" stroke="rgba(196, 240, 0, 0.5)" stroke-width="1" />
+                        <line x1="11" y1="8" x2="15" y2="8" stroke="rgba(196, 240, 0, 0.5)" stroke-width="1" />
+                        <rect x="7" y="14" width="18" height="14" fill="none" stroke="#C8F000" stroke-width="2" />
+                        <polyline points="13,18 17,21 13,24" fill="none" stroke="#C8F000" stroke-width="1.5" />
+                    </g>
+                    <g font-family="'Barlow Condensed', sans-serif" font-weight="800" font-size="22" fill="#FFFFFF"
+                        letter-spacing="0.08em">
+                        <text x="32" y="46">B</text>
+                        <text x="44" y="46">O</text>
+                        <text x="58" y="46">TZA</text>
+                    </g>
+                    <circle cx="49" cy="38.5" r="6" fill="none" stroke="#C8F000" stroke-width="1.5" />
+                    <text x="60" y="62" font-family="'Inter', sans-serif" font-weight="400" font-size="7" fill="#8A8FA8"
+                        letter-spacing="0.15em" text-anchor="middle">BY INDIKA AI</text>
+                </svg>
+            </div>
+            <div class="footer-right">
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="product.html" class="footer-link lime">PRODUCT</a>
+                    <a href="#usecases" class="footer-link">USE CASES</a>
+                    <a href="#how-it-works" class="footer-link">HOW IT WORKS</a>
+                    <a href="about.html" class="footer-link">ABOUT</a>
+                    <a href="login.html" class="footer-link">LOGIN</a>
+                </nav>
+                <div class="footer-legal-links">
+                    <a href="#" class="footer-legal">Privacy Statement</a>
+                    <a href="#" class="footer-legal">Terms of Use</a>
+                    <a href="#" class="footer-legal">Documentation</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2025 INDIKA AI. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login — BOTZA by Indika AI</title>
+    <meta name="description" content="Sign in to your Botza enterprise AI workspace." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="pages.css" />
+</head>
+
+<body class="login-body">
+    <div class="login-page">
+        <!-- LEFT PANEL -->
+        <div class="login-left">
+            <div class="login-ghost-text" aria-hidden="true">BOTZA</div>
+
+            <!-- Logo -->
+            <a href="index.html" class="login-logo" aria-label="Botza Home">
+                <svg viewBox="0 0 160 40" height="40" class="brand-logo-v1" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(0, 6)">
+                        <rect x="0" y="0" width="7" height="28" fill="#C8F000" />
+                        <rect x="7" y="0" width="14" height="12" fill="none" stroke="#C8F000" stroke-width="2" />
+                        <line x1="11" y1="4" x2="17" y2="4" stroke="rgba(196, 240, 0, 0.5)" stroke-width="1" />
+                        <line x1="11" y1="6" x2="17" y2="6" stroke="rgba(196, 240, 0, 0.5)" stroke-width="1" />
+                        <line x1="11" y1="8" x2="15" y2="8" stroke="rgba(196, 240, 0, 0.5)" stroke-width="1" />
+                        <rect x="7" y="14" width="18" height="14" fill="none" stroke="#C8F000" stroke-width="2" />
+                        <polyline points="13,18 17,21 13,24" fill="none" stroke="#C8F000" stroke-width="1.5" />
+                    </g>
+                    <g font-family="'Barlow Condensed', sans-serif" font-weight="800" font-size="28" fill="#FFFFFF"
+                        letter-spacing="0.08em">
+                        <text x="36" y="24">B</text>
+                        <text x="50" y="24">O</text>
+                        <text x="68" y="24">TZA</text>
+                    </g>
+                    <circle cx="56.5" cy="14" r="8" fill="none" stroke="#C8F000" stroke-width="1.5" />
+                    <text x="36" y="35" font-family="'Inter', sans-serif" font-weight="400" font-size="8" fill="#8A8FA8"
+                        letter-spacing="0.15em">BY INDIKA AI</text>
+                </svg>
+            </a>
+
+            <!-- Mini Knowledge Engine Schematic (static) -->
+            <div class="login-schematic" aria-hidden="true">
+                <div class="ls-row ls-top">
+                    <div class="ls-chip">📄 DOCS</div>
+                    <div class="ls-chip">🎫 TICKETS</div>
+                    <div class="ls-chip">📋 SOPs</div>
+                </div>
+                <svg class="ls-lines" viewBox="0 0 280 40" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="46" y1="0" x2="140" y2="38" stroke="#C8F000" stroke-width="1" stroke-dasharray="4 3"
+                        stroke-opacity="0.3" />
+                    <line x1="140" y1="0" x2="140" y2="38" stroke="#C8F000" stroke-width="1" stroke-dasharray="4 3"
+                        stroke-opacity="0.3" />
+                    <line x1="234" y1="0" x2="140" y2="38" stroke="#C8F000" stroke-width="1" stroke-dasharray="4 3"
+                        stroke-opacity="0.3" />
+                </svg>
+                <div class="ls-node">BOTZA</div>
+                <svg class="ls-lines" viewBox="0 0 280 40" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="140" y1="0" x2="46" y2="38" stroke="#C8F000" stroke-width="1" stroke-dasharray="4 3"
+                        stroke-opacity="0.3" />
+                    <line x1="140" y1="0" x2="140" y2="38" stroke="#C8F000" stroke-width="1" stroke-dasharray="4 3"
+                        stroke-opacity="0.3" />
+                    <line x1="140" y1="0" x2="234" y2="38" stroke="#C8F000" stroke-width="1" stroke-dasharray="4 3"
+                        stroke-opacity="0.3" />
+                </svg>
+                <div class="ls-row ls-bottom">
+                    <div class="ls-out">✓ ANSWERS</div>
+                    <div class="ls-out">□ QUIZZES</div>
+                    <div class="ls-out">⇄ BOTS</div>
+                </div>
+            </div>
+
+            <p class="login-tagline"><em>Your enterprise knowledge. Activated.</em></p>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="login-right">
+            <div class="login-form-wrap">
+                <h1 class="login-heading">WELCOME BACK</h1>
+                <p class="login-sub-text">Sign in to your Botza workspace</p>
+
+                <form class="login-form" id="login-form" onsubmit="handleLogin(event)">
+                    <div class="field-group">
+                        <input type="email" class="login-input" id="login-email" placeholder="WORK EMAIL" required
+                            autocomplete="email" />
+                    </div>
+                    <div class="field-group field-password">
+                        <input type="password" class="login-input" id="login-password" placeholder="PASSWORD" required
+                            autocomplete="current-password" />
+                        <button type="button" class="pw-toggle" id="pw-toggle" aria-label="Toggle password visibility">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8F000"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-full" id="login-submit">SIGN IN</button>
+
+                    <p class="login-forgot"><a href="#" id="forgot-link">Forgot password?</a></p>
+                </form>
+
+                <div class="login-divider">
+                    <span class="divider-line"></span>
+                    <span class="divider-text">OR</span>
+                    <span class="divider-line"></span>
+                </div>
+
+                <a href="#" class="btn-outline-lime btn-full" id="request-access-btn">REQUEST ACCESS</a>
+
+                <p class="login-copyright">© 2025 Indika AI</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Password toggle
+        const pwToggle = document.getElementById('pw-toggle');
+        const pwInput = document.getElementById('login-password');
+        pwToggle.addEventListener('click', () => {
+            const isHidden = pwInput.type === 'password';
+            pwInput.type = isHidden ? 'text' : 'password';
+            pwToggle.querySelector('svg').style.opacity = isHidden ? '1' : '0.5';
+        });
+
+        // Field validation on blur
+        const emailInput = document.getElementById('login-email');
+
+        emailInput.addEventListener('blur', () => {
+            emailInput.classList.remove('field--error', 'field--valid');
+            const next = emailInput.nextElementSibling;
+            if (next && next.classList.contains('field-error-msg')) next.remove();
+
+            if (!emailInput.value.trim()) return;
+
+            const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value);
+            if (!isValid) {
+                emailInput.classList.add('field--error');
+                const msg = document.createElement('div');
+                msg.className = 'field-error-msg';
+                msg.textContent = 'INVALID EMAIL FORMAT';
+                emailInput.parentNode.insertBefore(msg, emailInput.nextSibling);
+            } else {
+                emailInput.classList.add('field--valid');
+            }
+        });
+
+        pwInput.addEventListener('blur', () => {
+            pwInput.classList.remove('field--error', 'field--valid');
+            const parent = pwInput.closest('.field-group');
+            const existing = parent.querySelector('.field-error-msg');
+            if (existing) existing.remove();
+
+            if (!pwInput.value.trim()) return;
+
+            if (pwInput.value.length < 4) {
+                pwInput.classList.add('field--error');
+                const msg = document.createElement('div');
+                msg.className = 'field-error-msg';
+                msg.textContent = 'PASSWORD REQUIRED';
+                parent.appendChild(msg);
+            } else {
+                pwInput.classList.add('field--valid');
+            }
+        });
+
+        // Form handler — submit animation
+        function handleLogin(e) {
+            e.preventDefault();
+            const btn = document.getElementById('login-submit');
+            const form = document.getElementById('login-form');
+            const wrap = document.querySelector('.login-form-wrap');
+
+            // Phase 1: Loading dots
+            btn.textContent = '· · ·';
+            btn.style.letterSpacing = '0.3em';
+
+            setTimeout(() => {
+                // Phase 2: Show confirmation
+                form.style.transition = 'opacity 300ms ease';
+                form.style.opacity = '0';
+
+                setTimeout(() => {
+                    form.style.display = 'none';
+                    // Hide divider and request access
+                    const divider = wrap.querySelector('.login-divider');
+                    const reqAccess = wrap.querySelector('.btn-outline-lime');
+                    const copyright = wrap.querySelector('.login-copyright');
+                    if (divider) divider.style.display = 'none';
+                    if (reqAccess) reqAccess.style.display = 'none';
+                    if (copyright) copyright.style.display = 'none';
+
+                    const confirmation = document.createElement('div');
+                    confirmation.style.textAlign = 'center';
+                    confirmation.style.padding = '60px 0';
+                    confirmation.innerHTML = `
+                        <p style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;letter-spacing:0.06em;color:#C8F000;text-transform:uppercase;margin-bottom:12px;">◆ ACCESS GRANTED</p>
+                        <p style="font-size:14px;color:#8A8FA8;font-family:'Inter',sans-serif;">Redirecting to your workspace...</p>
+                        <div style="width:100%;height:2px;background:rgba(255,255,255,0.08);margin-top:32px;overflow:hidden;"><div style="height:100%;background:#C8F000;width:0%;animation:progressBar 2s ease-out forwards;"></div></div>
+                    `;
+                    wrap.appendChild(confirmation);
+
+                    // Add keyframe
+                    if (!document.getElementById('progressBarStyle')) {
+                        const style = document.createElement('style');
+                        style.id = 'progressBarStyle';
+                        style.textContent = '@keyframes progressBar { 0% { width: 0%; } 100% { width: 100%; } }';
+                        document.head.appendChild(style);
+                    }
+                }, 350);
+            }, 1500);
+        }
+    </script>
+</body>
+
+</html>
