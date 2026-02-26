@@ -361,7 +361,8 @@ body {
   text-decoration: none;
   flex-shrink: 0;
   position: relative;
-  z-index: 10001;
+  z-index: 10002;
+  /* Ensure logo is above the 10000 overlay */
 }
 
 .logo-diamond {
@@ -441,7 +442,8 @@ body {
   gap: 20px;
   flex-shrink: 0;
   position: relative;
-  z-index: 10001;
+  z-index: 10002;
+  /* Match the nav-logo */
 }
 
 .nav-login {
@@ -468,7 +470,8 @@ body {
   padding: 4px;
   margin-left: auto;
   position: relative;
-  z-index: 10001;
+  z-index: 10002;
+  /* Hamburger must also be clickable */
 }
 
 .hamburger span {
@@ -2217,7 +2220,7 @@ svg {
 
   .nav-links.open li {
     width: 100%;
-    max-width: 400px;
+    /* remove max-width 400px that might squeeze content, or let it stretch naturally */
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
@@ -2334,6 +2337,7 @@ svg {
 
   .brand-logo-v1 {
     height: 32px;
+    width: auto;
   }
 
   .btn-primary#nav-demo-btn {
