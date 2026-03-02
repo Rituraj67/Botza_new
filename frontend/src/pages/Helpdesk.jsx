@@ -150,9 +150,9 @@ export default function Helpdesk() {
         }(window, document, 'script', 'botzaHelpChat', 'http://localhost:5050/helpchat-widget.js'));
 
         window.botzaHelpChat('init', {
-            helpDeskSlug: 'demo',
-            apiToken: helpdeskApi.API_TOKEN
-        });
+            helpDeskSlug: 'tets',              // or whatever your actual slug is
+            apiToken: helpdeskApi.API_TOKEN    // must be set in .env
+          });
 
         return () => {
             if (typeof window.botzaHelpChat === 'function') {
@@ -375,9 +375,38 @@ export default function Helpdesk() {
                                 <div className="hd-topics-grid fade-up" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
                                     {videos.map(v => (
                                         <div key={v.id} className="botza-card hd-topic-card" style={{ padding: 0, overflow: 'hidden', cursor: 'pointer' }} onClick={() => navigate(`/video/${v.id}`)}>
-                                            <div style={{ background: '#111', height: 160, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-                                                <span style={{ fontSize: 40, color: 'var(--lime)', opacity: 0.8 }}>▶</span>
-                                                <span className="hd-video-badge">{Math.floor(v.durationSeconds / 60)}:{String(v.durationSeconds % 60).padStart(2, '0')}</span>
+                                            <div
+                                                style={{
+                                                    width: '100%',
+                                                    minHeight: 160,
+                                                    height: 160,
+                                                    position: 'relative',
+                                                    backgroundColor: '#111',
+                                                    overflow: 'hidden',
+                                                }}
+                                            >
+                                                {v.thumbnailUrl ? (
+                                                    <img
+                                                        src={v.thumbnailUrl}
+                                                        alt=""
+                                                        style={{
+                                                            position: 'absolute',
+                                                            inset: 0,
+                                                            width: '100%',
+                                                            height: '100%',
+                                                            objectFit: 'cover',
+                                                            display: 'block',
+                                                        }}
+                                                    />
+                                                ) : null}
+                                                <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
+                                                    <span style={{ fontSize: 40, color: 'var(--lime)', opacity: 0.9, textShadow: '0 0 8px rgba(0,0,0,0.8)' }}>▶</span>
+                                                </div>
+                                                {v.durationSeconds != null && (
+                                                    <span className="hd-video-badge">
+                                                        {Math.floor(v.durationSeconds / 60)}:{String(v.durationSeconds % 60).padStart(2, '0')}
+                                                    </span>
+                                                )}
                                             </div>
                                             <div className="hd-video-info" style={{ padding: '20px 24px' }}>
                                                 <h3 className="card-title" style={{ fontSize: 16, marginBottom: 8, color: 'var(--white)' }}>{v.title}</h3>
