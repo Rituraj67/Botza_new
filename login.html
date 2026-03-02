@@ -122,102 +122,196 @@
     </div>
 
     <script>
-        // Password toggle
+        /* ====================================================
+           BOTZA — login.html client script
+           Connects to the real Express backend API
+        ==================================================== */
+
+        const API_BASE = window.location.origin; // same origin (served by Express)
+
+        // ── Password toggle ──────────────────────────────────
         const pwToggle = document.getElementById('pw-toggle');
-        const pwInput = document.getElementById('login-password');
+        const pwInput  = document.getElementById('login-password');
         pwToggle.addEventListener('click', () => {
             const isHidden = pwInput.type === 'password';
             pwInput.type = isHidden ? 'text' : 'password';
             pwToggle.querySelector('svg').style.opacity = isHidden ? '1' : '0.5';
         });
 
-        // Field validation on blur
+        // ── Field validation on blur ─────────────────────────
         const emailInput = document.getElementById('login-email');
 
+        function clearFieldError(input) {
+            input.classList.remove('field--error', 'field--valid');
+            const msg = input.closest('.field-group').querySelector('.field-error-msg');
+            if (msg) msg.remove();
+        }
+
+        function showFieldError(input, text) {
+            input.classList.add('field--error');
+            const msg = document.createElement('div');
+            msg.className = 'field-error-msg';
+            msg.textContent = text;
+            input.closest('.field-group').appendChild(msg);
+        }
+
         emailInput.addEventListener('blur', () => {
-            emailInput.classList.remove('field--error', 'field--valid');
-            const next = emailInput.nextElementSibling;
-            if (next && next.classList.contains('field-error-msg')) next.remove();
-
+            clearFieldError(emailInput);
             if (!emailInput.value.trim()) return;
-
             const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value);
-            if (!isValid) {
-                emailInput.classList.add('field--error');
-                const msg = document.createElement('div');
-                msg.className = 'field-error-msg';
-                msg.textContent = 'INVALID EMAIL FORMAT';
-                emailInput.parentNode.insertBefore(msg, emailInput.nextSibling);
-            } else {
-                emailInput.classList.add('field--valid');
-            }
+            if (!isValid) showFieldError(emailInput, 'INVALID EMAIL FORMAT');
+            else emailInput.classList.add('field--valid');
         });
 
         pwInput.addEventListener('blur', () => {
-            pwInput.classList.remove('field--error', 'field--valid');
-            const parent = pwInput.closest('.field-group');
-            const existing = parent.querySelector('.field-error-msg');
-            if (existing) existing.remove();
-
+            clearFieldError(pwInput);
             if (!pwInput.value.trim()) return;
-
-            if (pwInput.value.length < 4) {
-                pwInput.classList.add('field--error');
-                const msg = document.createElement('div');
-                msg.className = 'field-error-msg';
-                msg.textContent = 'PASSWORD REQUIRED';
-                parent.appendChild(msg);
-            } else {
-                pwInput.classList.add('field--valid');
-            }
+            if (pwInput.value.length < 4) showFieldError(pwInput, 'PASSWORD TOO SHORT');
+            else pwInput.classList.add('field--valid');
         });
 
-        // Form handler — submit animation
-        function handleLogin(e) {
-            e.preventDefault();
-            const btn = document.getElementById('login-submit');
+        // ── Show inline API error banner ─────────────────────
+        function showLoginError(message) {
+            let banner = document.getElementById('login-error-banner');
+            if (!banner) {
+                banner = document.createElement('div');
+                banner.id = 'login-error-banner';
+                banner.style.cssText = [
+                    'background:rgba(255,60,60,0.12)',
+                    'border:1px solid rgba(255,60,60,0.35)',
+                    'color:#ff6b6b',
+                    'font-family:var(--font-body,Inter),sans-serif',
+                    'font-size:13px',
+                    'letter-spacing:0.05em',
+                    'padding:10px 14px',
+                    'border-radius:4px',
+                    'margin-bottom:14px',
+                    'text-align:center',
+                ].join(';');
+                const form = document.getElementById('login-form');
+                form.insertBefore(banner, form.firstChild);
+            }
+            banner.textContent = message;
+            banner.style.display = 'block';
+        }
+
+        function hideLoginError() {
+            const banner = document.getElementById('login-error-banner');
+            if (banner) banner.style.display = 'none';
+        }
+
+        // ── Show success animation ───────────────────────────
+        function showAccessGranted() {
             const form = document.getElementById('login-form');
             const wrap = document.querySelector('.login-form-wrap');
-
-            // Phase 1: Loading dots
-            btn.textContent = '· · ·';
-            btn.style.letterSpacing = '0.3em';
-
+            form.style.transition = 'opacity 300ms ease';
+            form.style.opacity = '0';
             setTimeout(() => {
-                // Phase 2: Show confirmation
-                form.style.transition = 'opacity 300ms ease';
-                form.style.opacity = '0';
+                form.style.display = 'none';
+                const divider   = wrap.querySelector('.login-divider');
+                const reqAccess = wrap.querySelector('.btn-outline-lime');
+                const copyright = wrap.querySelector('.login-copyright');
+                if (divider)   divider.style.display   = 'none';
+                if (reqAccess) reqAccess.style.display  = 'none';
+                if (copyright) copyright.style.display  = 'none';
 
-                setTimeout(() => {
-                    form.style.display = 'none';
-                    // Hide divider and request access
-                    const divider = wrap.querySelector('.login-divider');
-                    const reqAccess = wrap.querySelector('.btn-outline-lime');
-                    const copyright = wrap.querySelector('.login-copyright');
-                    if (divider) divider.style.display = 'none';
-                    if (reqAccess) reqAccess.style.display = 'none';
-                    if (copyright) copyright.style.display = 'none';
+                const confirmation = document.createElement('div');
+                confirmation.style.cssText = 'text-align:center;padding:60px 0';
+                confirmation.innerHTML = `
+                    <p style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;letter-spacing:0.06em;color:#C8F000;text-transform:uppercase;margin-bottom:12px;">◆ ACCESS GRANTED</p>
+                    <p style="font-size:14px;color:#8A8FA8;font-family:'Inter',sans-serif;">Redirecting to your workspace...</p>
+                    <div style="width:100%;height:2px;background:rgba(255,255,255,0.08);margin-top:32px;overflow:hidden;"><div style="height:100%;background:#C8F000;width:0%;animation:progressBar 2s ease-out forwards;"></div></div>
+                `;
+                wrap.appendChild(confirmation);
 
-                    const confirmation = document.createElement('div');
-                    confirmation.style.textAlign = 'center';
-                    confirmation.style.padding = '60px 0';
-                    confirmation.innerHTML = `
-                        <p style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;letter-spacing:0.06em;color:#C8F000;text-transform:uppercase;margin-bottom:12px;">◆ ACCESS GRANTED</p>
-                        <p style="font-size:14px;color:#8A8FA8;font-family:'Inter',sans-serif;">Redirecting to your workspace...</p>
-                        <div style="width:100%;height:2px;background:rgba(255,255,255,0.08);margin-top:32px;overflow:hidden;"><div style="height:100%;background:#C8F000;width:0%;animation:progressBar 2s ease-out forwards;"></div></div>
-                    `;
-                    wrap.appendChild(confirmation);
-
-                    // Add keyframe
-                    if (!document.getElementById('progressBarStyle')) {
-                        const style = document.createElement('style');
-                        style.id = 'progressBarStyle';
-                        style.textContent = '@keyframes progressBar { 0% { width: 0%; } 100% { width: 100%; } }';
-                        document.head.appendChild(style);
-                    }
-                }, 350);
-            }, 1500);
+                if (!document.getElementById('progressBarStyle')) {
+                    const style = document.createElement('style');
+                    style.id = 'progressBarStyle';
+                    style.textContent = '@keyframes progressBar{0%{width:0%}100%{width:100%}}';
+                    document.head.appendChild(style);
+                }
+            }, 350);
         }
+
+        // ── Main login handler — calls real API ──────────────
+        async function handleLogin(e) {
+            e.preventDefault();
+            hideLoginError();
+
+            const btn      = document.getElementById('login-submit');
+            const email    = emailInput.value.trim();
+            const password = pwInput.value;
+
+            if (!email || !password) {
+                showLoginError('Please enter your email and password.');
+                return;
+            }
+
+            // Loading state
+            const origText    = btn.textContent;
+            btn.textContent   = '· · ·';
+            btn.style.letterSpacing = '0.3em';
+            btn.disabled      = true;
+
+            try {
+                const response = await fetch(`${API_BASE}/api/auth/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password }),
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    // Show the error from the API
+                    btn.textContent = origText;
+                    btn.style.letterSpacing = '';
+                    btn.disabled = false;
+                    showLoginError((data.error || 'Login failed. Please try again.').toUpperCase());
+                    return;
+                }
+
+                // ✓ Success — store token & user info
+                localStorage.setItem('botza_token', data.token);
+                localStorage.setItem('botza_user',  JSON.stringify(data.user));
+
+                // Show the success animation
+                showAccessGranted();
+
+            } catch (err) {
+                btn.textContent = origText;
+                btn.style.letterSpacing = '';
+                btn.disabled = false;
+                showLoginError('NETWORK ERROR — PLEASE TRY AGAIN');
+                console.error('Login error:', err);
+            }
+        }
+
+        // ── Request Access button ────────────────────────────
+        document.getElementById('request-access-btn').addEventListener('click', async (e) => {
+            e.preventDefault();
+            const email = emailInput.value.trim();
+            if (!email) {
+                showLoginError('ENTER YOUR EMAIL ABOVE TO REQUEST ACCESS');
+                emailInput.focus();
+                return;
+            }
+            try {
+                const response = await fetch(`${API_BASE}/api/contact/request-access`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email }),
+                });
+                const data = await response.json();
+                const btn = document.getElementById('request-access-btn');
+                const orig = btn.textContent;
+                btn.textContent = '✓ REQUEST SENT';
+                btn.style.color = '#C8F000';
+                setTimeout(() => { btn.textContent = orig; btn.style.color = ''; }, 3000);
+            } catch (err) {
+                showLoginError('NETWORK ERROR — PLEASE TRY AGAIN');
+            }
+        });
     </script>
 </body>
 

@@ -1,0 +1,6 @@
+/* ============================================================
+   Botza React — Global CSS
+   Imports original style.css and pages.css tokens unchanged.
+   ============================================================ */
+@import './style.css';
+@import './pages.css';

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 px-6 py-4 lg:px-40 bg-white dark:bg-background-dark/50 sticky top-0 z-50 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">help_center</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Help Center</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-xl h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile avatar of a smiling man" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcD2pIi3rcNQR_7qG0v8Mibc8QRTmkTkZf_z8GfQHzIyZJ0Rm4bbHDCeQuf6HzUCaL2yhHSd5uLh-FmXGW12swVFaKd4dQB3dPFPLzMjivcc61_WjQ9dwBlp_g5zGoYDD6eJ9dvPWxIXnejeJtXEcdx2W0DNsYkJLMFbKktOWplzdZ5-_EdI_mvnWdGQH6-lg29z_jg-LjtEasS_Rk2bOLHkf-6XI45hYh7xt7iR31okH3d37lU0-tSMLg4zt0RajFOTwwHqO9yeDN");'></div>
+</div>
+</header>
+<main class="flex-1 max-w-[1200px] mx-auto w-full px-6 py-8">
+<section class="mb-10 text-center max-w-2xl mx-auto">
+<h1 class="text-3xl font-bold mb-6 text-slate-900 dark:text-white">How can we help you today?</h1>
+<label class="relative flex flex-col w-full group">
+<div class="flex w-full items-center rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20 transition-all shadow-sm">
+<div class="text-slate-400 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full border-none bg-transparent focus:ring-0 h-14 placeholder:text-slate-400 text-slate-900 dark:text-white px-4 text-base font-normal leading-normal" placeholder="Search for help, topics, or FAQs..."/>
+</div>
+</label>
+</section>
+<section class="mb-12">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white">Self-Help Videos</h2>
+<a class="text-primary font-semibold text-sm hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="group cursor-pointer">
+<div class="relative w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-xl overflow-hidden mb-3">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Person using a smartphone interface tutorial" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAL2oPcFcmzkIDppWyxIb8XZt8naRDK037xMgIn7ZruKR5GrC9t564kO-U0Ca2KA4gtXUDc146jkmIw1KIn4ORpXBX5ndVkYLMHAeLYKn0M_JUWKCVxzeWxL67AUlE_bHFQ1PnaBlBTCdb5jUH8J5GasP4SxMrDJ9VEhmVHu8trR4JxuPxrLVRsGZTjdoYN7Z6N-K7pzFyMBHhyDkhXMPsmHPJDOQ2mEMtLlUw2m_1uttxAgCXvN0nNJ9Evvzwxi2iPdsaMMszuIZOu");'></div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<div class="bg-white/90 rounded-full p-3 shadow-lg">
+<span class="material-symbols-outlined text-primary fill-1">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded">3:45</div>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Getting Started Guide</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Everything you need to set up your account.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="relative w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-xl overflow-hidden mb-3">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Dashboard analytics visualization screen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJY4t_8DD20juYdiScWRd6KSs_QY8rNb9qWwn28gtL9u-W7XFiyKWZS549ooz4w4mLi2e4eQ1zz5QXSbjn1Wf_0-NCrLgVlJV0D6oncPJbVPZRubPCXBl1upxFj0rkiQP8xiQIRv8oRghD_5GVBMiRyT1dfTPXNyI-suj6l0uaLIsSUc3pnz25S-CMUd1i0I_gsyPv9kqIIzTQ4nho6-IDK9CuXjyM13tPD6KqsH69mogAsVortMd7CX0_BSi8MOxYzxPIPi2DVYDY");'></div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<div class="bg-white/90 rounded-full p-3 shadow-lg">
+<span class="material-symbols-outlined text-primary fill-1">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded">5:12</div>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Advanced Account Settings</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Manage your notifications and privacy.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="relative w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-xl overflow-hidden mb-3">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Cybersecurity lock icon on tech background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuApflCUnwgBRPSS1n9fk6zeBrNWCICniYX2JQcLv8iCqmcVFmp9pS-Em09MX_GlFJLb6MWkyy-Ju-IucMuW7PTcP6xmZ5-XbxWN9hIERjSCKYwcRst1r53UZoEWggG0K2WQfLjcRtDxclhpNcqiWQd1pzYgISENMw-hX8Tv-g-jHaC3d43igw4x01m2yDN3GyOdi4BxgPN6QdF_YW1vU8Tg_xGehrN2rj4dVz-tG5ipCoVUlFhDL1SUR4mDgxzy9uLQfR4fwCKiCVln");'></div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<div class="bg-white/90 rounded-full p-3 shadow-lg">
+<span class="material-symbols-outlined text-primary fill-1">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded">4:20</div>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Stay Secure &amp; Protected</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Best practices for account security.</p>
+</div>
+</div>
+</section>
+<section class="mb-12">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-6">Browse Popular Topics</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="flex flex-col items-center p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-md hover:border-primary/40 transition-all cursor-pointer">
+<div class="p-3 rounded-full bg-primary/10 text-primary mb-4">
+<span class="material-symbols-outlined text-3xl">account_circle</span>
+</div>
+<span class="font-semibold text-center">Account</span>
+</div>
+<div class="flex flex-col items-center p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-md hover:border-primary/40 transition-all cursor-pointer">
+<div class="p-3 rounded-full bg-primary/10 text-primary mb-4">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<span class="font-semibold text-center">Billing</span>
+</div>
+<div class="flex flex-col items-center p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-md hover:border-primary/40 transition-all cursor-pointer">
+<div class="p-3 rounded-full bg-primary/10 text-primary mb-4">
+<span class="material-symbols-outlined text-3xl">settings_suggest</span>
+</div>
+<span class="font-semibold text-center">Usage</span>
+</div>
+<div class="flex flex-col items-center p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-md hover:border-primary/40 transition-all cursor-pointer">
+<div class="p-3 rounded-full bg-primary/10 text-primary mb-4">
+<span class="material-symbols-outlined text-3xl">shield_locked</span>
+</div>
+<span class="font-semibold text-center">Privacy</span>
+</div>
+</div>
+</section>
+<section class="mb-12">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-6">Frequently Asked Questions</h2>
+<div class="space-y-3">
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 text-left font-medium text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+<span>How do I change my subscription plan?</span>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+<div class="px-5 pb-5 text-slate-600 dark:text-slate-400 text-sm hidden">
+                                You can change your plan at any time in the Billing section of your account settings. Pro-rated charges will apply automatically.
+                            </div>
+</div>
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 text-left font-medium text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+<span>Can I share my account with team members?</span>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 text-left font-medium text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+<span>What payment methods are accepted?</span>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 text-left font-medium text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+<span>How do I reset my password?</span>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+</div>
+</section>
+<section class="bg-primary/10 rounded-2xl p-8 text-center">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Still need help?</h2>
+<p class="text-slate-600 dark:text-slate-400 mb-6 max-w-md mx-auto">Our support team is available 24/7 to help you with any technical or account related issues.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-white px-8 py-3 rounded-xl font-bold hover:brightness-110 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">chat_bubble</span>
+                            Chat with us
+                        </button>
+<button class="bg-white dark:bg-slate-800 text-slate-900 dark:text-white px-8 py-3 rounded-xl font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">mail</span>
+                            Email support
+                        </button>
+</div>
+</section>
+</main>
+<footer class="border-t border-slate-200 dark:border-slate-800 py-10 px-6 bg-white dark:bg-background-dark/50">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary">help_center</span>
+<span class="font-bold text-slate-900 dark:text-white">Help Center</span>
+<span class="mx-2">|</span>
+<span class="text-sm">© 2024 Help Center Inc.</span>
+</div>
+<div class="flex gap-6 text-sm text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary" href="#">Terms</a>
+<a class="hover:text-primary" href="#">Privacy</a>
+<a class="hover:text-primary" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

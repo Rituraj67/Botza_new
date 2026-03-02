@@ -1013,6 +1013,64 @@
     </footer>
 
     <script src="main.js"></script>
+    <script>
+        /* ====================================================
+           BOTZA — index.html API integration
+           Newsletter subscribe form → real backend call
+        ==================================================== */
+
+        const BOTZA_API = window.location.origin;
+
+        // Override the mock handleNewsletterSubmit from main.js
+        async function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            const emailInput = document.getElementById('newsletter-email');
+            const statusEl = document.getElementById('form-status');
+            const submitBtn = document.getElementById('submit-newsletter');
+            const email = emailInput.value.trim();
+
+            if (!email) return;
+
+            const origHTML = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span>· · ·</span>';
+            submitBtn.disabled = true;
+            statusEl.textContent = '';
+            statusEl.style.color = '';
+
+            try {
+                const res = await fetch(`${BOTZA_API}/api/newsletter/subscribe`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email }),
+                });
+                const data = await res.json();
+
+                if (res.ok || res.status === 200) {
+                    submitBtn.innerHTML = '<span>✓ SUBMITTED</span>';
+                    submitBtn.style.color = 'var(--lime)';
+                    statusEl.textContent = data.message ? data.message.toUpperCase() : "WE'LL BE IN TOUCH.";
+                    statusEl.style.color = 'var(--lime)';
+                    emailInput.value = '';
+                } else {
+                    submitBtn.innerHTML = origHTML;
+                    statusEl.textContent = (data.error || 'Something went wrong').toUpperCase();
+                    statusEl.style.color = '#ff6b6b';
+                }
+            } catch (err) {
+                submitBtn.innerHTML = origHTML;
+                statusEl.textContent = 'NETWORK ERROR — PLEASE TRY AGAIN';
+                statusEl.style.color = '#ff6b6b';
+            } finally {
+                submitBtn.disabled = false;
+                setTimeout(() => {
+                    submitBtn.innerHTML = origHTML;
+                    submitBtn.style.color = '';
+                    statusEl.textContent = '';
+                    statusEl.style.color = '';
+                }, 4000);
+            }
+        }
+    </script>
 </body>
 
 </html>
